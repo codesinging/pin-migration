@@ -1,0 +1,17 @@
+{
+    "name": "codesinging/pin-migration",
+    "description": "A database migration package based on Phinx for ThinkPHP",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "codesinging",
+            "email": "codesinging@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "CodeSinging\\PinMigration\\": "src"
+        }
+    }
+}
