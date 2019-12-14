@@ -17,7 +17,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 use think\console\Command;
 use think\console\Input;
 use think\console\Output;
-use think\Db;
 use think\facade\Config as AppConfig;
 
 abstract class MigrationCommand extends Command

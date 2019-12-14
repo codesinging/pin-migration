@@ -2,6 +2,8 @@
 
 <p align="center"> A database migration package based on Phinx for ThinkPHP.</p>
 
+    Note: This package is only compatible with ThinkPHP5.1.
+
 
 ## Installing
 
