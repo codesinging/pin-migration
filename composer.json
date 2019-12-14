@@ -8,7 +8,10 @@
             "email": "codesinging@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "topthink/framework": "^5.1",
+        "robmorgan/phinx": "~0.11.1"
+    },
     "autoload": {
         "psr-4": {
             "CodeSinging\\PinMigration\\": "src"
