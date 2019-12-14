@@ -12,6 +12,9 @@
     "autoload": {
         "psr-4": {
             "CodeSinging\\PinMigration\\": "src"
-        }
+        },
+        "files": [
+            "src/bootstrap.php"
+        ]
     }
 }
