@@ -2,7 +2,7 @@
 
 <p align="center"> A database migration package based on Phinx for ThinkPHP.</p>
 
-    Note: This package is only compatible with ThinkPHP5.1.
+    Note: This package is only compatible with ThinkPHP5.1 now.
 
 
 ## Installing
@@ -13,7 +13,34 @@ $ composer require codesinging/pin-migration -vvv
 
 ## Usage
 
-TODO
+### Initialization
+
+After you installed this package, you should firstly initialize the configuration by run:
+
+``` shell
+php think migrate:init
+```
+
+This command will create a `migration` named configuration file.
+
+### Commands
+
+| Command | Description |
+| --------| ------------|
+| `migrate:init` | Initialize migration configuration |
+| `migrate:breakpoint` | Manage breakpoints |
+| `migrate:create` | Create a new migration |
+| `migrate:rollback` | Rollback the last or to a specific migration |
+| `migrate:run` | Migrate the database |
+| `migrate:status` | Show migration status |
+| `migrate:test` | Verify the configuration file |
+| `seed:create` | Create a new database seeder |
+| `seed:run` | Run database seeders |
+
+## Documentation
+
+- [Official, English](http://docs.phinx.org/en/latest/)
+- [Chinese](https://tsy12321.gitbooks.io/phinx-doc/)
 
 ## Contributing
 
