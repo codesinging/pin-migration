@@ -6,6 +6,6 @@
 
 use think\Console;
 
-$commands = include_once __DIR__.'/commands.php';
+$commands = include __DIR__.'/commands.php';
 
 Console::addDefaultCommands($commands);

@@ -1,6 +1,6 @@
-<h1 align="center"> pin-migration </h1>
+# PinMigration
 
-<p align="center"> A database migration package based on Phinx for ThinkPHP.</p>
+A database migration package based on Phinx for ThinkPHP.
 
     Note: This package is only compatible with ThinkPHP5.1 now.
 
@@ -21,7 +21,7 @@ After you installed this package, you should firstly initialize the configuratio
 php think migrate:init
 ```
 
-This command will create a `migration` named configuration file.
+This command will create a configuration file named `migration.php` in the config directory.
 
 ### Commands
 
