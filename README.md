@@ -30,6 +30,8 @@ This command will create a configuration file named `migration.php` in the confi
 | `migrate:init` | Initialize migration configuration |
 | `migrate:breakpoint` | Manage breakpoints |
 | `migrate:create` | Create a new migration |
+| `migrate:refresh` | Rollback and re-run all migrations |
+| `migrate:reset` | Rollback all migrations |
 | `migrate:rollback` | Rollback the last or to a specific migration |
 | `migrate:run` | Migrate the database |
 | `migrate:status` | Show migration status |
