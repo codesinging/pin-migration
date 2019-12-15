@@ -23,7 +23,7 @@ class Run extends MigrationCommand
     protected function configure()
     {
         $this->setName(self::COMMAND_NAME)
-            ->setDescription('Migrate the database')
+            ->setDescription('Run migrations')
             ->addOption('--environment', '-e', Option::VALUE_REQUIRED, 'The target environment')
             ->addOption('--target', '-t', Option::VALUE_REQUIRED, 'The version number to migrate to')
             ->addOption('--date', '-d', Option::VALUE_REQUIRED, 'The date to migrate to')
