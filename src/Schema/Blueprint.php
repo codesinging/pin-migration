@@ -66,24 +66,27 @@ class Blueprint
      * Add a new boolean column on the table.
      *
      * @param string $column
+     * @param bool   $default
      *
      * @return ColumnDefinition
      */
-    public function boolean(string $column)
+    public function boolean(string $column, bool $default=true)
     {
-        return $this->addColumn($column, 'boolean');
+        return $this->addColumn($column, 'boolean')->default($default);
     }
 
     /**
      * Add a new char column on the table.
      *
-     * @param string $column
+     * @param string   $column
+     * @param int|null $length
      *
      * @return ColumnDefinition
      */
-    public function char(string $column)
+    public function char(string $column, int $length=null)
     {
-        return $this->addColumn($column, 'char');
+        $options = $length ? compact('length') : [];
+        return $this->addColumn($column, 'char', $options);
     }
 
     /**
