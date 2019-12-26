@@ -79,11 +79,12 @@ class ColumnDefinition extends Fluent
 
     /**
      * Allow NULL values (should not be used with primary keys!).
+     *
      * @param bool $nullable
      *
      * @return ColumnDefinition
      */
-    public function nullable(bool $nullable=true)
+    public function nullable(bool $nullable = true)
     {
         return $this->null($nullable);
     }
@@ -99,6 +100,19 @@ class ColumnDefinition extends Fluent
     {
         $this->index = $options;
         return $this;
+    }
+
+    /**
+     * Set unique index for this column.
+     *
+     * @param array $options
+     *
+     * @return $this
+     */
+    public function unique(array $options = [])
+    {
+        $options['unique'] = true;
+        return $this->index($options);
     }
 
     /**
