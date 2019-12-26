@@ -354,7 +354,21 @@ class Blueprint
      *
      * @return ColumnDefinition
      */
-    public function timestamp(string $column, string $default = 'CURRENT_TIMESTAMP', string $update = '')
+    public function timestamp(string $column, string $default = null, string $update = '')
+    {
+        return $this->addColumn($column, 'timestamp', compact('default', 'update'))->nullable();
+    }
+
+    /**
+     * Add a new current timestamp column on the table.
+     *
+     * @param string $column
+     * @param string $default
+     * @param string $update
+     *
+     * @return ColumnDefinition
+     */
+    public function currentTimestamp(string $column, string $default = 'CURRENT_TIMESTAMP', string $update = '')
     {
         return $this->addColumn($column, 'timestamp', compact('default', 'update'));
     }
@@ -481,7 +495,7 @@ class Blueprint
      */
     public function createTime(string $column = 'create_time')
     {
-        return $this->timestamp($column);
+        return $this->currentTimestamp($column);
     }
 
     /**
@@ -493,7 +507,7 @@ class Blueprint
      */
     public function updateTime(string $column = 'update_time')
     {
-        return $this->timestamp($column)->default(null)->nullable();
+        return $this->currentTimestamp($column)->default(null)->nullable();
     }
 
     /**
@@ -505,7 +519,7 @@ class Blueprint
      */
     public function deleteTime(string $column = 'delete_time')
     {
-        return $this->timestamp($column)->default(null)->nullable();
+        return $this->currentTimestamp($column)->default(null)->nullable();
     }
 
     /**
